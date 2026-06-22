@@ -60,7 +60,7 @@ Documents are parsed, cleaned (OCR-aware), chunked into 500-token segments, embe
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ikantkode/pdfLLM.git
+   git clone https://github.com/tuoc1226-maker/OCRLLM.git
    cd pdfLLM
    ```
 2. Configure environment variables:
