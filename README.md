@@ -1,6 +1,6 @@
-# pdfLLM - Document Processing and Retrieval-Augmented Generation
+# OCRLLM - Document Processing and Retrieval-Augmented Generation
 
-`pdfLLM` is a Retrieval-Augmented Generation (RAG) microservice designed for processing, embedding, and querying documents. It integrates document parsing, semantic search, knowledge graph construction, and LLM-based generation to provide advanced document intelligence. Built with scalability in mind, it uses PostgreSQL for session management, Qdrant for vector storage, Dgraph for graph-based indexing, and Celery for asynchronous task processing.
+`OCRLLM` is a Retrieval-Augmented Generation (RAG) microservice designed for processing, embedding, and querying documents. It integrates document parsing, semantic search, knowledge graph construction, and LLM-based generation to provide advanced document intelligence. Built with scalability in mind, it uses PostgreSQL for session management, Qdrant for vector storage, Dgraph for graph-based indexing, and Celery for asynchronous task processing.
 
 ## Change Log
 
@@ -34,7 +34,7 @@ Organize a business's document corpus (e.g., inventory receipts, payroll, utilit
 
 ## Overview
 
-pdfLLM combines:
+OCRLLM combines:
 - 📚 **Semantic Search**: Embedding-based retrieval using OpenAI models.
 - 🧠 **Graph-Based Search**: Entity and relationship indexing via Dgraph.
 - 💬 **LLM-Powered Responses**: Accurate, cited answers using OpenAI chat models.
@@ -61,7 +61,7 @@ Documents are parsed, cleaned (OCR-aware), chunked into 500-token segments, embe
 1. Clone the repository:
    ```bash
    git clone https://github.com/tuoc1226-maker/OCRLLM.git
-   cd pdfLLM
+   cd OCRLLM
    ```
 2. Configure environment variables:
    ```bash
@@ -95,8 +95,8 @@ Documents are parsed, cleaned (OCR-aware), chunked into 500-token segments, embe
 - ✅ Replaced `state.json` with PostgreSQL
 - ✅ Celery for asynchronous processing
 - ✅ Ollama / Local LLM support
-- 🔜 JWT authentication (not planned for base pdfLLM)
-- 🔜 Dynamic model selection (OpenAI, DeepSeek, Grok) (not planned for base pdfLLM)
+- 🔜 JWT authentication (not planned for base OCRLLM)
+- 🔜 Dynamic model selection (OpenAI, DeepSeek, Grok) (not planned for base OCRLLM)
 - 🔜 Enhanced orchestration for Master Chat
 
 ## License
