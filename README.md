@@ -2,18 +2,50 @@
 
 `OCRLLM` is a Retrieval-Augmented Generation (RAG) microservice designed for processing, embedding, and querying documents. It integrates document parsing, semantic search, knowledge graph construction, and LLM-based generation to provide advanced document intelligence. Built with scalability in mind, it uses PostgreSQL for session management, Qdrant for vector storage, Dgraph for graph-based indexing, and Celery for asynchronous task processing.
 
-## Change Log
+## Cloud Architecture
 
-- **07/31/2025**: 
-  - Implemented smaller chunk sizes (500 tokens) for improved embedding accuracy and retrieval performance.
-  - Integrated Celery for asynchronous OCR processing and file uploads, enabling faster handling of multiple files (tested with up to 5 files simultaneously).
-  - Replaced `state.json` with PostgreSQL for robust session and metadata management.
-  - Introduced "Categories" feature, allowing users to create custom categories with tailored prompts for document organization.
-  - Added "Master Chat" and "Category Chat" features for querying across all documents or specific categories, with orchestration chain in progress.
-  - PostgreSQL runs on a non-standard port to avoid conflicts with existing installations.
-- **07/27/2025**: Initial support for asynchronous multi-file uploads and category-based prompts.
-- **08/31/2025**: Integrated [`exaOCR`](https://github.com/ikantkode/exaOCR) into the app.
+The system is deployed using AWS services.
 
+### AWS Services
+
+- EC2
+  - Hosts Docker application
+
+- S3
+  - Stores uploaded documents and OCR files
+
+- RDS PostgreSQL
+  - Stores application data
+
+- CloudWatch
+  - Application monitoring and logs
+
+
+Architecture:
+
+                    User
+                     |
+                     |
+              HTTPS Request
+                     |
+                     |
+              AWS Load Balancer
+                     |
+                     |
+              Application Server
+                 (Docker)
+                     |
+        +------------+------------+
+        |                         |
+        |                         |
+     Amazon S3                Amazon RDS
+  Document Storage          PostgreSQL
+        |
+        |
+ OCR / LLM Processing
+        |
+        |
+ CloudWatch Monitoring
 ## Context Size of Models
 
 The application supports multiple embedding and chat models, with a focus on cost-effective and high-performance options. For consistency, embeddings are truncated to 1,024 dimensions, and documents are chunked into 500-token segments for processing.
