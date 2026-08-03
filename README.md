@@ -1,10 +1,6 @@
 # Hotel Management System
 
-<p align="center">
-  <strong>🌐 Language</strong><br>
-  <a href="#english">🇺🇸 English</a> |
-  <a href="#日本語">🇯🇵 日本語</a>
-</p>
+[🇯🇵 日本語](README.md) | [🇺🇸 English](README.en.md)
 
 ---
 
