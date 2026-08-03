@@ -1,0 +1,39 @@
+		
+		
+								Receive Question
+
+									↓
+
+								Retrieve Chat Session
+
+									↓
+
+								Load Prompt
+
+									↓
+
+								Search Vector Database
+
+									↓
+
+								Top-K Documents
+
+									↓
+
+								Build Context
+
+									↓
+
+								Call LLM
+
+									↓
+
+								Receive Answer
+
+									↓
+
+								Save Chat History
+
+									↓
+
+								Return Response

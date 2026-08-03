@@ -1,0 +1,73 @@
+									
+									
+									
+									Frontend
+										  │
+										  ▼
+									FastAPI
+										  │
+										  ▼
+									Controllers (Endpoints)
+										  │
+										  ▼
+									Business Logic (Services)
+										  │
+										  ▼
+									Repositories
+										  │
+										  ▼
+									Database / LLM / External APIs
+									
+									
+										FastAPI
+									Browser / Mobile App / Frontend
+											│
+									  HTTP Request
+											│
+											▼
+										FastAPI Server
+											│
+											▼
+									Python Business Logic
+											│
+											▼
+								 Database / AI Model / External API
+											│
+											▼
+									  HTTP Response (JSON)
+									  
+									  
+									  
+									  React
+									   │
+									POST /login
+									   │
+									   ▼
+									FastAPI
+									   │
+									check username/password
+									   │
+									query PostgreSQL
+									   │
+									return JWT token
+									   ▼
+									React
+									
+									
+								Browser
+
+									↓
+
+								GET /hello
+
+									↓
+
+								FastAPI
+
+									↓
+
+								hello()
+
+									↓
+
+								{"message":"Hello"}
