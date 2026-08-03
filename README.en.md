@@ -1,5 +1,8 @@
 # OCRLLM 
 
+Retrieval-Augmented Generation (RAG) microservice designed for processing, embedding, and querying documents. 
+It integrates document parsing, semantic search, knowledge graph construction, and LLM-based generation to provide advanced document intelligence. Built with scalability in mind, it uses PostgreSQL for session management, Qdrant for vector storage, Dgraph for graph-based indexing, and Celery for asynchronous task processing.
+
 ## Cloud Architecture
 
 The system is deployed using AWS services.
